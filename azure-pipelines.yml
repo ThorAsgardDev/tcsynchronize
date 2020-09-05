@@ -44,3 +44,15 @@ steps:
       Write-Host "Hello World"
       
       tree /F
+
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'github.com_ThorAsgardDev'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'edit'
+    target: '$(Build.SourceVersion)'
+    tag: 'pre-release'
+    assets: 'bin/Release/netcoreapp3.1/win-x64/publish.zip'
+    assetUploadMode: 'replace'
+    isPreRelease: true
+    addChangeLog: false
