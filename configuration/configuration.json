@@ -1,0 +1,19 @@
+{
+  "logLevel": "Debug",
+  "synchronizations": [
+    {
+      "srcPath": "",
+      "destPath": "",
+      "filterPatterns": null
+    }
+  ],
+  "globalFilterPatterns": [
+    ".svn",
+    ".idea",
+    "target",
+    "*.iml",
+    "*.iml~",
+    "*.tmp",
+    "*.TMP"
+  ]
+}
