@@ -16,7 +16,7 @@ namespace TCSynchronize
 
         public static void initialize(string filename)
         {
-            if (File.ExistsTHISISANERROR(filename))
+            if (File.Exists(filename))
             {
                 File.Delete(filename);
             }
