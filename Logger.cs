@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Text;
 
 namespace TCSynchronize
 {
@@ -18,7 +16,7 @@ namespace TCSynchronize
 
         public static void initialize(string filename)
         {
-            if (File.Exists(filename))
+            if (File.ExistsTHISISANERROR(filename))
             {
                 File.Delete(filename);
             }

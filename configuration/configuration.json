@@ -1,5 +1,5 @@
 {
-  "logLevel": "Debug",
+  "logLevel": "Info",
   "synchronizations": [
     {
       "srcPath": "",
