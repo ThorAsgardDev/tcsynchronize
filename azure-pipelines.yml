@@ -41,7 +41,7 @@ steps:
     action: 'edit'
     target: '$(Build.SourceVersion)'
     tag: 'pre-release'
-    assets: './package/*'
+    assets: './package/*.zip'
     assetUploadMode: 'replace'
     isPreRelease: true
     addChangeLog: false
