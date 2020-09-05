@@ -36,6 +36,7 @@ namespace TCSynchronize
             {
                 // Ignored exceptions
                 // If the old path does not exist, do nothing
+                _ = e;
                 Logger.log(Logger.Level.Debug, $"Ignore exception rename {oldPath} -> {newPath}");
             }
         }
