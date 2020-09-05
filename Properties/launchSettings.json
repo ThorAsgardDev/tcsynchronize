@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TCSynchronize": {
+      "commandName": "Project",
+      "workingDirectory": "$(SolutionDir)"
+    }
+  }
+}

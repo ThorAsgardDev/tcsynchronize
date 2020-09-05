@@ -6,8 +6,4 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(ProjectDir)resources&quot; &quot;$(TargetDir)resources&quot; /E /Y /I /R&#xD;&#xA;xcopy &quot;$(ProjectDir)configuration&quot; &quot;$(TargetDir)configuration&quot; /E /Y /I /R" />
-  </Target>
-
 </Project>
