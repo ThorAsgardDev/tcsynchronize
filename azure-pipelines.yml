@@ -24,16 +24,6 @@ steps:
 - script: ./ci/package.cmd
   displayName: 'Package'
   
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host "Hello World"
-      
-      tree /F
-
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'github.com_ThorAsgardDev'
