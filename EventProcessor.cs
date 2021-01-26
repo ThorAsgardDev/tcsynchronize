@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Collections.Concurrent;
 using System.Threading;
@@ -145,13 +144,13 @@ namespace TCSynchronize
 
                         case WatcherChangeTypes.Created:
                             {
-                                fileTools.copy(srcEntry, destEntry, true);
+                                fileTools.copy(srcEntry, destEntry, true, filter);
                                 break;
                             }
 
                         case WatcherChangeTypes.Changed:
                             {
-                                fileTools.copy(srcEntry, destEntry, false);
+                                fileTools.copy(srcEntry, destEntry, false, filter);
                                 break;
                             }
                     }
@@ -202,7 +201,7 @@ namespace TCSynchronize
                         {
                             try
                             {
-                                File.Copy(srcNewEntry, destNewEntry, true);
+                                fileTools.copyFile(srcNewEntry, destNewEntry);
                             }
                             catch (Exception e) when (e is FileNotFoundException || e is DirectoryNotFoundException)
                             {

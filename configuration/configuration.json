@@ -9,6 +9,8 @@
   ],
   "globalFilterPatterns": [
     ".svn",
+    ".git",
+    ".gitignore",
     ".idea",
     "target",
     "*.iml",
