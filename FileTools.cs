@@ -97,12 +97,17 @@ namespace TCSynchronize
 
         public void copyFile(string srcPath, string destPath)
         {
-            FileAttributes attributes = File.GetAttributes(destPath);
-            if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+            FileInfo destFileInfo = new FileInfo(destPath);
+
+            if (destFileInfo.Exists)
             {
-                // Make the file RW
-                attributes &= ~FileAttributes.ReadOnly;
-                File.SetAttributes(destPath, attributes);
+                FileAttributes attributes = File.GetAttributes(destPath);
+                if ((attributes & FileAttributes.ReadOnly) == FileAttributes.ReadOnly)
+                {
+                    // Make the file RW
+                    attributes &= ~FileAttributes.ReadOnly;
+                    File.SetAttributes(destPath, attributes);
+                }
             }
 
             File.Copy(srcPath, destPath, true);
